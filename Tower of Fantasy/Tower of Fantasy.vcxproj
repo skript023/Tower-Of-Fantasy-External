@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{81ABA187-6DA4-C0D9-96D6-A55E822EA0E5}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Tower of Fantasy</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\Release\</OutDir>
+    <IntDir>..\bin\int\Release\Tower of Fantasy\</IntDir>
+    <TargetName>Tower of Fantasy</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>common.hpp</PrecompiledHeaderFile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DisableSpecificWarnings>4100;4201;4307;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x601;NDEBUG;EXTERNAL_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\vendor\json\single_include;..\vendor\ImGui;..\vendor\g3log\src;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>common.hpp</ForcedIncludeFiles>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x601;NDEBUG;EXTERNAL_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\vendor\json\single_include;..\vendor\ImGui;..\vendor\g3log\src;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\bin\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Functions.h" />
+    <ClInclude Include="src\Overlay.h" />
+    <ClInclude Include="src\bot_function.hpp" />
+    <ClInclude Include="src\common.hpp" />
+    <ClInclude Include="src\features.hpp" />
+    <ClInclude Include="src\fiber_pool.hpp" />
+    <ClInclude Include="src\file_manager.hpp" />
+    <ClInclude Include="src\file_manager\file.hpp" />
+    <ClInclude Include="src\file_manager\folder.hpp" />
+    <ClInclude Include="src\fonts\font_list.hpp" />
+    <ClInclude Include="src\gui.hpp" />
+    <ClInclude Include="src\includes\http_request.h" />
+    <ClInclude Include="src\includes\re_class.hpp" />
+    <ClInclude Include="src\includes\subprocess.hpp" />
+    <ClInclude Include="src\logger.hpp" />
+    <ClInclude Include="src\memory\pattern.hpp" />
+    <ClInclude Include="src\memory\process.hpp" />
+    <ClInclude Include="src\menu\player_inventory.h" />
+    <ClInclude Include="src\menu\player_menu.h" />
+    <ClInclude Include="src\menu\player_stats.h" />
+    <ClInclude Include="src\menu\setting.h" />
+    <ClInclude Include="src\pointer.hpp" />
+    <ClInclude Include="src\pointers.hpp" />
+    <ClInclude Include="src\renderer.hpp" />
+    <ClInclude Include="src\resource.h" />
+    <ClInclude Include="src\script.hpp" />
+    <ClInclude Include="src\script_mgr.hpp" />
+    <ClInclude Include="src\thread_pool.hpp" />
+    <ClInclude Include="src\utility\config\coordinates_attachment.h" />
+    <ClInclude Include="src\utility\config\persist_teleport.h" />
+    <ClInclude Include="src\utility\d3dx9math.h" />
+    <ClInclude Include="src\utility\enums.hpp" />
+    <ClInclude Include="src\utility\joaat.hpp" />
+    <ClInclude Include="src\utility\memory.hpp" />
+    <ClInclude Include="src\utility\menu_features\all.hpp" />
+    <ClInclude Include="src\utility\menu_features\player_attack_stats.hpp" />
+    <ClInclude Include="src\utility\menu_features\player_controller.hpp" />
+    <ClInclude Include="src\utility\menu_features\player_defense_stats.hpp" />
+    <ClInclude Include="src\utility\menu_features\player_movement.hpp" />
+    <ClInclude Include="src\utility\menu_settings.hpp" />
+    <ClInclude Include="src\utility\utility.hpp" />
+    <ClInclude Include="src\utility\vector.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\common.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\features.cpp" />
+    <ClCompile Include="src\fiber_pool.cpp" />
+    <ClCompile Include="src\file_manager\file.cpp" />
+    <ClCompile Include="src\file_manager\folder.cpp" />
+    <ClCompile Include="src\fonts\rubik.cpp" />
+    <ClCompile Include="src\gui.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\memory\pattern.cpp" />
+    <ClCompile Include="src\menu\player_inventory.cpp" />
+    <ClCompile Include="src\menu\player_menu.cpp" />
+    <ClCompile Include="src\menu\player_stats.cpp" />
+    <ClCompile Include="src\menu\setting.cpp" />
+    <ClCompile Include="src\pointers.cpp" />
+    <ClCompile Include="src\renderer.cpp" />
+    <ClCompile Include="src\script.cpp" />
+    <ClCompile Include="src\script_mgr.cpp" />
+    <ClCompile Include="src\thread_pool.cpp" />
+    <ClCompile Include="src\utility\config\persist_teleport.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\Scarlet Nexus.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\vendor\ImGui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\vendor\g3log\g3log.vcxproj">
+      <Project>{81AD640F-EDC1-8CC0-B643-3020221789F1}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

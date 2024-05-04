@@ -1,0 +1,5 @@
+bin/
+.vs
+.git
+vendor/
+premake.exe

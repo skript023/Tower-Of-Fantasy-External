@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="file_manager">
+      <UniqueIdentifier>{9FDE6993-8B41-F937-34C7-31EE2009C5BA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fonts">
+      <UniqueIdentifier>{EF84730F-5B99-9BC0-241B-3F2090EE97F1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes">
+      <UniqueIdentifier>{1CA10C65-086E-6770-3187-55181DB39CFE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory">
+      <UniqueIdentifier>{DEA8820D-CA4A-ADE3-B305-C1379F463434}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="menu">
+      <UniqueIdentifier>{1A919A7C-06C8-9B0D-AFB4-81109BCA170F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{79DE5C48-E5BD-DBE3-EED5-66BA5A344245}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility\config">
+      <UniqueIdentifier>{8c82a948-88b0-4878-b8cc-1c28212614de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility\menu_features">
+      <UniqueIdentifier>{3ebb0eca-3a97-4ad4-8400-ef335757eee3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Functions.h" />
+    <ClInclude Include="src\Overlay.h" />
+    <ClInclude Include="src\bot_function.hpp" />
+    <ClInclude Include="src\common.hpp" />
+    <ClInclude Include="src\features.hpp" />
+    <ClInclude Include="src\fiber_pool.hpp" />
+    <ClInclude Include="src\file_manager.hpp" />
+    <ClInclude Include="src\file_manager\file.hpp">
+      <Filter>file_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\file_manager\folder.hpp">
+      <Filter>file_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fonts\font_list.hpp">
+      <Filter>fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui.hpp" />
+    <ClInclude Include="src\includes\http_request.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\includes\re_class.hpp">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\includes\subprocess.hpp">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logger.hpp" />
+    <ClInclude Include="src\memory\pattern.hpp">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\process.hpp">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu\player_inventory.h">
+      <Filter>menu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu\player_menu.h">
+      <Filter>menu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu\player_stats.h">
+      <Filter>menu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu\setting.h">
+      <Filter>menu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pointer.hpp" />
+    <ClInclude Include="src\pointers.hpp" />
+    <ClInclude Include="src\renderer.hpp" />
+    <ClInclude Include="src\resource.h" />
+    <ClInclude Include="src\script.hpp" />
+    <ClInclude Include="src\script_mgr.hpp" />
+    <ClInclude Include="src\thread_pool.hpp" />
+    <ClInclude Include="src\utility\enums.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\joaat.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\memory.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\menu_settings.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\utility.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\vector.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\config\persist_teleport.h">
+      <Filter>utility\config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\config\coordinates_attachment.h">
+      <Filter>utility\config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\menu_features\player_controller.hpp">
+      <Filter>utility\menu_features</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\menu_features\player_attack_stats.hpp">
+      <Filter>utility\menu_features</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\menu_features\player_defense_stats.hpp">
+      <Filter>utility\menu_features</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\menu_features\player_movement.hpp">
+      <Filter>utility\menu_features</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\menu_features\all.hpp">
+      <Filter>utility\menu_features</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\d3dx9math.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\common.cpp" />
+    <ClCompile Include="src\features.cpp" />
+    <ClCompile Include="src\fiber_pool.cpp" />
+    <ClCompile Include="src\file_manager\file.cpp">
+      <Filter>file_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\file_manager\folder.cpp">
+      <Filter>file_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fonts\rubik.cpp">
+      <Filter>fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\memory\pattern.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\player_inventory.cpp">
+      <Filter>menu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\player_menu.cpp">
+      <Filter>menu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\player_stats.cpp">
+      <Filter>menu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\setting.cpp">
+      <Filter>menu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pointers.cpp" />
+    <ClCompile Include="src\renderer.cpp" />
+    <ClCompile Include="src\script.cpp" />
+    <ClCompile Include="src\script_mgr.cpp" />
+    <ClCompile Include="src\thread_pool.cpp" />
+    <ClCompile Include="src\utility\config\persist_teleport.cpp">
+      <Filter>utility\config</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\Scarlet Nexus.rc" />
+  </ItemGroup>
+</Project>
